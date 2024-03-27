@@ -4970,7 +4970,7 @@ type = 'inline',data = {
 if redis:get(bot_id..":start") then
 r = redis:get(bot_id..":start")
 else
-r ="*✻ اهلا بك عزيزي المواطن $ \n ✻ انا البوت اختصاصي حماية المجموعات \n ✻ حماية المجموعات من الكفار والمشركين 😂\n✻  ارفع البوت مشرف وراح يتفعل تلقائي .*"
+r ="*☆ اهلا بك عزيزي المواطن ☆ \n ✻ انا البوت اختصاصي حماية المجموعات \n ✻ حماية المجموعات من الكفار والمشركين ♧\n✻  ارفع البوت مشرف وراح يتفعل تلقائي .*"
 end
 return bot.sendText(msg.chat_id,msg.id,r,"md", true, false, false, false, reply_markup)
 end
@@ -13982,7 +13982,7 @@ end
 ballanceed = redis:get(bot_id.."boob"..msg.sender_id.user_id) or 0
 
 if tonumber(coniss) < 999 then
-return bot.sendText(msg.chat_id,msg.id, "*⌯ الحد الادنى المسموح هو 1000 دينار ??\n","md",true)
+return bot.sendText(msg.chat_id,msg.id, "*⌯ الحد الادنى المسموح هو 1000 دينار 💵\n","md",true)
 end
 if tonumber(ballanceed) < tonumber(coniss) then
 return bot.sendText(msg.chat_id,msg.id, "*⌯ فلوسك ماتكفي","md",true)
