@@ -14796,7 +14796,6 @@ local NamecBots = {
 'هااا',
 'هلا ؟',
 'ياخي شتبي/ن',
-'كس امك شتريد مني',
 }
 return bot.sendText(msg.chat_id,msg.id, NamecBots[math.random(#NamecBots)],"md",true)  
 end
@@ -23753,7 +23752,7 @@ bot.sendText(msg.chat_id,msg.id,tttttt)
 redis:del(bot_id..":"..msg.sender_id.user_id..":rjo_Bots"..msg.chat_id)
 end
 if text and text ~="نسبه الانوثه" and redis:get(bot_id..":"..msg.sender_id.user_id..":ano_Bots"..msg.chat_id) == "sendanoe" then
-numj = {"😂 10","🤤 20","😢 30","😔 35","😒 75","?? 34","😗 66","🤐 82","😪 23","😫 19","😛 55","😜 80","😲 63","?? 32","🙂 27","😎 89","😋 99","?? 98","😀 79","🤣 100","😣 8","🙄 3","😕 6","🤯 0",};
+numj = {"😂 10","🤤 20","😢 30","😔 35","😒 75","?? 34","😗 66","🤐 82","😪 23","😫 19","😛 55","😜 80","😲 63","😓 32","🙂 27","😎 89","😋 99","?? 98","😀 79","🤣 100","😣 8","🙄 3","😕 6","🤯 0",};
 sendnuj = numj[math.random(#numj)]
 local tttttt = '- نسبه الانوثة : '..text..' '..sendnuj..' %'
 bot.sendText(msg.chat_id,msg.id,tttttt) 
