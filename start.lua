@@ -4970,7 +4970,7 @@ type = 'inline',data = {
 if redis:get(bot_id..":start") then
 r = redis:get(bot_id..":start")
 else
-r ="*☆ اهلا بك عزيزي المواطن ☆ \n ✻ انا البوت اختصاصي حماية المجموعات \n ✻ حماية المجموعات من الكفار والمشركين ♧\n✻  ارفع البوت مشرف وراح يتفعل تلقائي .*"
+r ="*☆ اهلا بك عزيزي المواطن ☆ \n ☆ انا البوت اختصاصي حماية المجموعات \n ☆ حماية المجموعات من الكفار والمشركين ♧\n☆  ارفع البوت مشرف وراح يتفعل تلقائي .*"
 end
 return bot.sendText(msg.chat_id,msg.id,r,"md", true, false, false, false, reply_markup)
 end
