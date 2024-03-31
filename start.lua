@@ -14976,19 +14976,32 @@ bot.sendText(msg.chat_id,msg.id,"*- الاسم : *( "..(t).." *)*\n*- المعر
 end
 end
 end
-if text == 'مطور السورس' or text == 'الدعم'then
-Text = [[
-≪━━━━━━━━━≫
-✺[𝘋𝘦𝘝𝘦𝘓𝘰𝘗𝘦𝘙](t.me/zozo98m)✺
-✺[𝘋𝘦𝘝𝘦𝘓𝘰𝘗𝘦𝘙](t.me/EE28i)✺
-≪━━━━━━━━━≫
-]]
-send(msg.chat_id_, msg.id_,Text)
-return false
+if text == 'مطور السورس' then
+local UserId_Info = bot.searchPublicChat("zozo98m")
+if UserId_Info.id then
+local UserInfo = bot.getUser(UserId_Info.id)
+if UserInfo.username and UserInfo.username ~= "" then
+t = '['..UserInfo.first_name..'](t.me/'..UserInfo.username..')'
+ban = ' '..UserInfo.first_name..' '
+u = '[@'..UserInfo.username..']'
+else
+t = '['..UserInfo.first_name..'](tg://user?id='..UserInfo.id..')'
+u = 'لا يوجد'
 end
-bot.sendText(msg.chat_id,msg.id,"*- تم تثبيت الرساله بنجاح .*","md",true)
-local Rmsg = bot.getMessage(msg.chat_id, msg.reply_to_message_id)
-bot.pinChatMessage(msg.chat_id,Rmsg.id,true)
+local photo = bot.getUserProfilePhotos(UserId_Info.id)
+if photo.total_count > 0 then
+local TestText = " *- 𝖣𝖾𝗏 𝖭𝖺𝗆𝖾 :* "..(t).." \n*- 𝖣𝖾𝗏 𝖴𝗌𝖾𝗋 :* "..(u).." \n*- 𝖣𝖾𝗏 𝗂𝖣 :* ["..msg.sender_id.user_id.."]\n"
+keyboardd = {}
+keyboardd.inline_keyboard = {
+{
+{text = ban, url = "https://t.me/"..UserInfo.username..""},
+},
+}
+local msg_id = msg.id/2097152/0.5 
+https.request("https://api.telegram.org/bot"..Token..'/sendPhoto?chat_id='..msg.chat_id..'&caption='..URL.escape(TestText)..'&photo='..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboardd))
+else
+bot.sendText(msg.chat_id,msg.id,"*- الاسم : *( "..(t).." *)*\n*- المعرف : *( "..(u).." *)*\n["..GetBio(UserInfo.id).."]","md",true)  
+end
 end
 end
 if text == 'معلوماتي' or text == 'موقعي' or text == 'صلاحياتي' then
