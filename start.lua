@@ -98,7 +98,7 @@ token=Token
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------
 namebot = redis:get(bot_id..":namebot") or "بيلا"
-SudosS = {1914327324}
+SudosS = {7037510730}
 Sudos = {sudoid,1914327324}
 ----------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------
@@ -248,7 +248,7 @@ end
 function Get_Rank(user_id,chat_id)
 if devS(user_id) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1914327324) then  
+elseif tonumber(user_id) == tonumber(7037510730) then  
 var = 'مبرمج السورس'
 elseif tonumber(user_id) == tonumber(1914327324) then  
 var = 'مبرمج السورس'
@@ -14975,7 +14975,7 @@ end
 end
 end
 if text == 'مطور السورس' then
-local UserId_Info = bot.searchPublicChat("SSSSSSY")
+local UserId_Info = bot.searchPublicChat("zozo98m")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
@@ -23770,6 +23770,7 @@ local Text = "*- welcome to the ᴀʟ- Bella sᴏᴜʀᴄᴇ .*\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '- Bella 𝘴𝘰𝘶𝘳𝘤𝘦 .',url="https://t.me/EE28i"}},
+{{text = '- 𓏺𝙯𝙖𝙞𝙣𝙖𝙗 .',url="https://t.me/zozo98m"}},
 {{text = '- CoDeR .',url="https://t.me/SSSSSSY"}},
 }
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo=https://t.me/EE28i&caption=".. URL.escape(Text).."&photo=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
