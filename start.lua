@@ -4819,7 +4819,7 @@ bot.sendText(msg.chat_id,msg.id,"*⌔︙الاسم : *( "..(t).." *)*\n*⌔︙ا
 end
 end
 if text == 'مطور السورس' or text == 'مبرمج السورس' then
-local UserId_Info = bot.searchPublicChat("SSSSBS ")
+local UserId_Info = bot.searchPublicChat("SSSSBS")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
@@ -10203,7 +10203,7 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 return send("sendphoto",{
 chat_id=msg.chat_id,
 photo="https://t.me/EE92i",
-caption=('*𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 𝘣𝘦𝘭𝘭𝘢 .\n\n*[⌔  𝘣𝘦𝘭𝘭𝘢 𝘤𝘩𝘢𝘯𝘯𝘦𝘭 .](http://t.me/EE92i)*\n\n*[⌔  𝘪𝘯𝘧𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 .](http://t.me/EE28i)*\n\n*[⌔  𝘣𝘦𝘭𝘭𝘢 𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .](http://t.me/SSSSBS )*\n\n*[⌔  𝘣𝘰𝘵 𝘣𝘦𝘭𝘭𝘢 .](http://t.me/b5Ebot)'),
+caption=('*𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 𝘣𝘦𝘭𝘭𝘢 .\n\n*[⌔  𝘣𝘦𝘭𝘭𝘢 𝘤𝘩𝘢𝘯𝘯𝘦𝘭 .](http://t.me/EE92i)*\n\n*[⌔  𝘪𝘯𝘧𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 .](http://t.me/EE28i)*\n\n*[⌔  𝘣𝘦𝘭𝘭𝘢 𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .](http://t.me/SSSSBS)*\n\n*[⌔  𝘣𝘰𝘵 𝘣𝘦𝘭𝘭𝘢 .](http://t.me/b5Ebot)'),
 reply_to_message_id=msg.id,
 parse_mode="markdown",
 reply_markup=markup(nil,{{{text = '⌔  𝘣𝘦𝘭𝘭𝘢 𝘴𝘰𝘳𝘶𝘤𝘦 .',url="t.me/EE92i"}}})
